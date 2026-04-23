@@ -1,0 +1,17 @@
+{
+  "name": "fwa-dz-2-shortest-path",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "predev": "npm run wasm:build",
+    "build": "vite build",
+    "prebuild": "npm run wasm:build",
+    "preview": "vite preview",
+    "wasm:build": "bash scripts/build-wasm.sh"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

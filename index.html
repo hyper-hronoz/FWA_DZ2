@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сравнение JS и WASM для поиска кратчайшего пути</title>
+    <meta
+      name="description"
+      content="Домашняя работа №2: сравнение скорости поиска кратчайшего пути в графе дорог на JavaScript и WebAssembly."
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">FWA • Домашняя работа №2</p>
+        <h1>Поиск кратчайшего пути: <span>JavaScript</span> против <span>WebAssembly</span></h1>
+        <p class="hero-copy">
+          Генератор строит большой связный граф дорог, затем одна и та же задача решается
+          алгоритмом Дейкстры в двух реализациях. Время считается в браузере через
+          <code>performance.now()</code>.
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="panel controls-panel">
+          <div class="panel-heading">
+            <h2>Параметры эксперимента</h2>
+            <p>Рекомендуемый минимум по условию: от 10 000 вершин.</p>
+          </div>
+
+          <form id="benchmark-form" class="controls-grid">
+            <label>
+              <span>Количество вершин</span>
+              <input id="node-count" name="nodeCount" type="number" min="10000" max="100000" step="1000" value="20000" />
+            </label>
+
+            <label>
+              <span>Средняя степень</span>
+              <input id="average-degree" name="averageDegree" type="number" min="2" max="20" step="1" value="6" />
+            </label>
+
+            <label>
+              <span>Повторов замера</span>
+              <input id="runs" name="runs" type="number" min="1" max="10" step="1" value="4" />
+            </label>
+
+            <label>
+              <span>Seed генератора</span>
+              <input id="seed" name="seed" type="number" min="1" max="4294967295" step="1" value="20260419" />
+            </label>
+
+            <div class="button-row">
+              <button id="run-button" type="submit">Сгенерировать граф и сравнить</button>
+              <button id="preset-button" type="button" class="ghost-button">Нагрузочный пресет</button>
+            </div>
+          </form>
+
+          <div class="status-box">
+            <div class="status-line">
+              <span class="status-label">Состояние</span>
+              <strong id="status-text">Инициализация WebAssembly...</strong>
+            </div>
+            <div class="status-line">
+              <span class="status-label">Маршрут</span>
+              <strong id="route-text">Ожидание запуска</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel dataset-panel">
+          <div class="panel-heading">
+            <h2>Данные графа</h2>
+            <p>Обе реализации получают один и тот же набор входных данных.</p>
+          </div>
+
+          <div class="stats-grid" id="dataset-stats">
+            <article class="stat-card">
+              <span>Вершины</span>
+              <strong id="nodes-stat">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Дорог</span>
+              <strong id="edges-stat">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Направленных рёбер</span>
+              <strong id="directed-stat">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Время генерации</span>
+              <strong id="generation-stat">0 мс</strong>
+            </article>
+          </div>
+
+          <div class="log-box">
+            <h3>Ход эксперимента</h3>
+            <ul id="log-list"></ul>
+          </div>
+        </section>
+
+        <section class="panel visualization-panel">
+          <div class="panel-heading">
+            <h2>Визуализация графа</h2>
+            <p>Подграф и layout рассчитываются в WebAssembly, браузер только рисует результат.</p>
+          </div>
+
+          <div class="visualization-meta">
+            <article class="stat-card">
+              <span>Подграф</span>
+              <strong id="viz-nodes-stat">0 вершин</strong>
+            </article>
+            <article class="stat-card">
+              <span>Рёбра подграфа</span>
+              <strong id="viz-edges-stat">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Layout в WASM</span>
+              <strong id="viz-layout-stat">0 мс</strong>
+            </article>
+          </div>
+
+          <div class="canvas-wrap">
+            <canvas id="graph-canvas" width="960" height="560"></canvas>
+            <div id="graph-placeholder" class="graph-placeholder">
+              Запустите эксперимент, чтобы построить визуализацию подграфа.
+            </div>
+          </div>
+
+          <div class="legend-row">
+            <span><i class="legend-dot neutral-dot"></i> обычные вершины</span>
+            <span><i class="legend-dot start-dot"></i> старт</span>
+            <span><i class="legend-dot target-dot"></i> финиш</span>
+            <span><i class="legend-line path-line"></i> кратчайший путь</span>
+          </div>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="panel-heading">
+            <h2>Результаты</h2>
+            <p>Сравнение среднего времени выполнения и итоговых расстояний.</p>
+          </div>
+
+          <div class="results-grid">
+            <article class="result-card js-card">
+              <div class="result-header">
+                <span>JavaScript</span>
+                <strong id="js-avg">0 мс</strong>
+              </div>
+              <div class="bar-track">
+                <div id="js-bar" class="bar-fill js-bar"></div>
+              </div>
+              <p id="js-details">Нет данных</p>
+            </article>
+
+            <article class="result-card wasm-card">
+              <div class="result-header">
+                <span>WebAssembly (Rust)</span>
+                <strong id="wasm-avg">0 мс</strong>
+              </div>
+              <div class="bar-track">
+                <div id="wasm-bar" class="bar-fill wasm-bar"></div>
+              </div>
+              <p id="wasm-details">Нет данных</p>
+            </article>
+          </div>
+
+          <div class="summary-card">
+            <h3>Итог</h3>
+            <p id="summary-text">Запустите эксперимент, чтобы получить сравнение.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

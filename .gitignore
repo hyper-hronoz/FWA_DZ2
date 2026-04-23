@@ -1,0 +1,15 @@
+node_modules/
+dist/
+
+# Generated wasm bundle is committed from src/wasm, but keep the placeholder rule.
+src/wasm/*
+!src/wasm/.gitignore
+!src/wasm/*.js
+!src/wasm/*.d.ts
+!src/wasm/*.wasm
+
+rust-wasm/target/
+
+# Common local noise
+*.log
+.DS_Store
