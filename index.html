@@ -16,7 +16,8 @@
         <h1>Поиск кратчайшего пути: <span>JavaScript</span> против <span>WebAssembly</span></h1>
         <p class="hero-copy">
           Генератор строит большой связный граф дорог, затем одна и та же задача решается
-          алгоритмом Дейкстры в двух реализациях. Время считается в браузере через
+          алгоритмом Дейкстры в двух реализациях: на <code>JavaScript</code> и в
+          <code>Rust/WebAssembly</code>. Время считается в браузере через
           <code>performance.now()</code>.
         </p>
       </header>
@@ -41,7 +42,7 @@
 
             <label>
               <span>Повторов замера</span>
-              <input id="runs" name="runs" type="number" min="1" max="10" step="1" value="4" />
+              <input id="runs" name="runs" type="number" min="1" max="20" step="1" value="4" />
             </label>
 
             <label>
@@ -98,42 +99,6 @@
           </div>
         </section>
 
-        <section class="panel visualization-panel">
-          <div class="panel-heading">
-            <h2>Визуализация графа</h2>
-            <p>Подграф и layout рассчитываются в WebAssembly, браузер только рисует результат.</p>
-          </div>
-
-          <div class="visualization-meta">
-            <article class="stat-card">
-              <span>Подграф</span>
-              <strong id="viz-nodes-stat">0 вершин</strong>
-            </article>
-            <article class="stat-card">
-              <span>Рёбра подграфа</span>
-              <strong id="viz-edges-stat">0</strong>
-            </article>
-            <article class="stat-card">
-              <span>Layout в WASM</span>
-              <strong id="viz-layout-stat">0 мс</strong>
-            </article>
-          </div>
-
-          <div class="canvas-wrap">
-            <canvas id="graph-canvas" width="960" height="560"></canvas>
-            <div id="graph-placeholder" class="graph-placeholder">
-              Запустите эксперимент, чтобы построить визуализацию подграфа.
-            </div>
-          </div>
-
-          <div class="legend-row">
-            <span><i class="legend-dot neutral-dot"></i> обычные вершины</span>
-            <span><i class="legend-dot start-dot"></i> старт</span>
-            <span><i class="legend-dot target-dot"></i> финиш</span>
-            <span><i class="legend-line path-line"></i> кратчайший путь</span>
-          </div>
-        </section>
-
         <section class="panel results-panel">
           <div class="panel-heading">
             <h2>Результаты</h2>
@@ -149,7 +114,9 @@
               <div class="bar-track">
                 <div id="js-bar" class="bar-fill js-bar"></div>
               </div>
-              <p id="js-details">Нет данных</p>
+              <div id="js-details" class="result-meta">
+                <span>Нет данных</span>
+              </div>
             </article>
 
             <article class="result-card wasm-card">
@@ -160,7 +127,9 @@
               <div class="bar-track">
                 <div id="wasm-bar" class="bar-fill wasm-bar"></div>
               </div>
-              <p id="wasm-details">Нет данных</p>
+              <div id="wasm-details" class="result-meta">
+                <span>Нет данных</span>
+              </div>
             </article>
           </div>
 

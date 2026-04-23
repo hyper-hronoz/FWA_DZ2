@@ -68,6 +68,11 @@ export function generateRoadGraph({ nodeCount, averageDegree, seed }) {
     target += 1;
   }
 
+  const fromArray = Uint32Array.from(from);
+  const toArray = Uint32Array.from(to);
+  const weightsArray = Float64Array.from(weights);
+  const compressedSparseRow = buildCompressedSparseRow(nodeCount, fromArray, toArray, weightsArray);
+
   return {
     nodeCount,
     seed,
@@ -75,9 +80,10 @@ export function generateRoadGraph({ nodeCount, averageDegree, seed }) {
     target,
     undirectedEdgeCount: seen.size,
     directedEdgeCount: from.length,
-    from: Uint32Array.from(from),
-    to: Uint32Array.from(to),
-    weights: Float64Array.from(weights)
+    from: fromArray,
+    to: toArray,
+    weights: weightsArray,
+    csr: compressedSparseRow
   };
 }
 
@@ -289,11 +295,11 @@ function dijkstraWithCsr(nodeCount, offsets, neighbors, costs, start, target) {
   };
 }
 
-export function shortestPathJs(nodeCount, from, to, weights, start, target) {
+export function shortestPathJs(nodeCount, from, to, weights, start, target, prebuiltCsr) {
   if (start < 0 || start >= nodeCount || target < 0 || target >= nodeCount) {
     throw new Error("Некорректные вершины старта или финиша.");
   }
 
-  const { offsets, neighbors, costs } = buildCompressedSparseRow(nodeCount, from, to, weights);
+  const { offsets, neighbors, costs } = prebuiltCsr ?? buildCompressedSparseRow(nodeCount, from, to, weights);
   return dijkstraWithCsr(nodeCount, offsets, neighbors, costs, start, target);
 }
