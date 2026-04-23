@@ -1,4 +1,5 @@
 use serde::Serialize;
+use std::cell::RefCell;
 use std::cmp::Ordering;
 use std::collections::BinaryHeap;
 use wasm_bindgen::prelude::*;
@@ -38,8 +39,39 @@ struct PathResult {
     found: bool,
     distance: Option<f64>,
     path_length: usize,
-    path_nodes: Vec<u32>,
     visited_count: usize,
+}
+
+struct Graph {
+    node_count: usize,
+    offsets: Vec<usize>,
+    neighbors: Vec<u32>,
+    costs: Vec<f64>,
+}
+
+thread_local! {
+    static GRAPH: RefCell<Option<Graph>> = const { RefCell::new(None) };
+}
+
+fn reconstruct_path_length(previous: &[i32], start: usize, target: usize) -> usize {
+    if target != start && previous[target] == -1 {
+        return 0;
+    }
+
+    let mut length = 1usize;
+    let mut current = target;
+
+    while current != start {
+        let parent = previous[current];
+        if parent < 0 {
+            return 0;
+        }
+
+        current = parent as usize;
+        length += 1;
+    }
+
+    length
 }
 
 fn build_csr(
@@ -90,66 +122,48 @@ fn build_csr(
     Ok((offsets, neighbors, costs))
 }
 
-fn reconstruct_path_length(previous: &[i32], start: usize, target: usize) -> usize {
-    if target != start && previous[target] == -1 {
-        return 0;
-    }
-
-    let mut length = 1usize;
-    let mut current = target;
-
-    while current != start {
-        let parent = previous[current];
-        if parent < 0 {
-            return 0;
-        }
-
-        current = parent as usize;
-        length += 1;
-    }
-
-    length
-}
-
-fn reconstruct_path_nodes(previous: &[i32], start: usize, target: usize) -> Vec<u32> {
-    if target != start && previous[target] == -1 {
-        return Vec::new();
-    }
-
-    let mut reversed_path = Vec::new();
-    let mut current = target;
-
-    loop {
-        reversed_path.push(current as u32);
-        if current == start {
-            break;
-        }
-
-        let parent = previous[current];
-        if parent < 0 {
-            return Vec::new();
-        }
-
-        current = parent as usize;
-    }
-
-    reversed_path.reverse();
-    reversed_path
-}
-
-pub fn shortest_path(
+pub fn load_graph(
     node_count: usize,
     from: Vec<u32>,
     to: Vec<u32>,
     weights: Vec<f64>,
+) -> Result<(), JsValue> {
+    let (offsets, neighbors, costs) = build_csr(node_count, &from, &to, &weights)?;
+
+    GRAPH.with(|graph| {
+        *graph.borrow_mut() = Some(Graph {
+            node_count,
+            offsets,
+            neighbors,
+            costs,
+        });
+    });
+
+    Ok(())
+}
+
+pub fn shortest_path(
     start: usize,
     target: usize,
 ) -> Result<JsValue, JsValue> {
+    GRAPH.with(|graph| shortest_path_on_loaded_graph(&graph.borrow(), start, target))
+}
+
+fn shortest_path_on_loaded_graph(
+    graph: &Option<Graph>,
+    start: usize,
+    target: usize,
+) -> Result<JsValue, JsValue> {
+    let graph = graph
+        .as_ref()
+        .ok_or_else(|| JsValue::from_str("Graph is not loaded into WASM memory."))?;
+
+    let node_count = graph.node_count;
+
     if start >= node_count || target >= node_count {
         return Err(JsValue::from_str("Start or target vertex is out of range."));
     }
 
-    let (offsets, neighbors, costs) = build_csr(node_count, &from, &to, &weights)?;
     let mut distances = vec![f64::INFINITY; node_count];
     let mut previous = vec![-1i32; node_count];
     let mut visited = vec![false; node_count];
@@ -178,9 +192,9 @@ pub fn shortest_path(
             continue;
         }
 
-        for edge_index in offsets[node]..offsets[node + 1] {
-            let next_node = neighbors[edge_index] as usize;
-            let next_cost = cost + costs[edge_index];
+        for edge_index in graph.offsets[node]..graph.offsets[node + 1] {
+            let next_node = graph.neighbors[edge_index] as usize;
+            let next_cost = cost + graph.costs[edge_index];
 
             if next_cost < distances[next_node] {
                 distances[next_node] = next_cost;
@@ -201,11 +215,6 @@ pub fn shortest_path(
             reconstruct_path_length(&previous, start, target)
         } else {
             0
-        },
-        path_nodes: if found {
-            reconstruct_path_nodes(&previous, start, target)
-        } else {
-            Vec::new()
         },
         visited_count,
     };
