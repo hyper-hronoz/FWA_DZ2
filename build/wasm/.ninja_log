@@ -1,14 +1,14 @@
 # ninja log v7
 11	1744	1777485306609576737	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
-2165	2264	1777491895709809118	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	19898c1c6e648761
+2194	2283	1777491955778223135	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	19898c1c6e648761
 10	1839	1777485306607438992	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
 11	2219	1777485306608439004	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
-9	1784	1777491893555165046	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
-9	1723	1777491893555381894	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj	e850c8417f6f9e4f
-8	1772	1777491893552794374	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Graph.cpp.obj	75d6d832bb60838f
-9	2165	1777491893553794380	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Shortest_Path_Finder.cpp.obj	7926c167e9459eea
-5	1721	1777491953590062358	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj	e850c8417f6f9e4f
 5	1754	1777491953589720644	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
+5	1721	1777491953590062358	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj	e850c8417f6f9e4f
 4	1778	1777491953588207929	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Graph.cpp.obj	75d6d832bb60838f
 4	2194	1777491953589481604	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Shortest_Path_Finder.cpp.obj	7926c167e9459eea
-2194	2283	1777491955778223135	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	19898c1c6e648761
+10	1758	1777497101954794203	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj	e850c8417f6f9e4f
+9	1781	1777497101953794203	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Graph.cpp.obj	75d6d832bb60838f
+9	1798	1777497101954749775	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
+9	2170	1777497101954420247	CMakeFiles/path_finder_wasm.dir/cpp-wasm/Shortest_Path_Finder.cpp.obj	7926c167e9459eea
+2170	2291	1777497104114794258	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	19898c1c6e648761

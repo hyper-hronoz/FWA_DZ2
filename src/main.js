@@ -24,7 +24,8 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
         js_bar: document.querySelector("#js-bar"),
         wasm_average: document.querySelector("#wasm-avg"),
         wasm_details: document.querySelector("#wasm-details"),
-        wasm_bar: document.querySelector("#wasm-bar")
+        wasm_bar: document.querySelector("#wasm-bar"),
+        final_result: document.querySelector("#final_result")
       };
     }
 
@@ -150,6 +151,7 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
     ]);
     ui_context.result_fields.js_bar.style.width = `${(js_average / max_value) * 100}%`;
     ui_context.result_fields.wasm_bar.style.width = `${(wasm_average / max_value) * 100}%`;
+    // ui_context.result_fields.final_result = `${js_average}%`
   }
 
   async function benchmark_implementation(label, runner, graph) {
