@@ -8,10 +8,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(
   path_finder_wasm
-  cpp-wasm/graph.cpp
-  cpp-wasm/shortest_path_finder.cpp
+  cpp-wasm/Graph.cpp
+  cpp-wasm/Shortest_Path_Finder.cpp
   cpp-wasm/wasm_runtime.cpp
-  cpp-wasm/path_finder.cpp
+  cpp-wasm/Path_Finder.cpp
 )
 
 set_target_properties(path_finder_wasm PROPERTIES

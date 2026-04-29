@@ -1,14 +1,14 @@
-#include "wasm_runtime.h"
-
 #include <cstdlib>
 #include <vector>
+
+#include "wasm_runtime.h"
 
 namespace {
 std::vector<void *> wasm_allocations;
 }
 
 extern "C" {
-std::uint32_t alloc_bytes(std::uint32_t byte_count, std::uint32_t) {
+std::uint32_t alloc_bytes(std::uint32_t byte_count) {
   void *pointer = std::malloc(byte_count == 0 ? 1 : byte_count);
   if (pointer == nullptr) {
     return 0;

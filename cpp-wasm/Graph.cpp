@@ -1,4 +1,4 @@
-#include "graph.h"
+#include "Graph.h"
 
 Graph::Graph(std::uint32_t node_count, std::uint32_t edge_count,
              const std::uint32_t *from, const std::uint32_t *to,

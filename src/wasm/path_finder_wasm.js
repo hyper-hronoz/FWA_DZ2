@@ -34,9 +34,10 @@ function get_memory() {
   return wasm_exports.memory;
 }
 
-function normalize_input(input) {
+async function normalize_input(input) {
   if (input instanceof URL || typeof input === "string") {
-    return fetch(input).then((response) => response.arrayBuffer());
+    const response = await fetch(input);
+    return response.arrayBuffer();
   }
 
   if (input instanceof Response) {
@@ -44,34 +45,34 @@ function normalize_input(input) {
   }
 
   if (input instanceof ArrayBuffer) {
-    return Promise.resolve(input);
+    return input;
   }
 
   if (ArrayBuffer.isView(input)) {
-    return Promise.resolve(input.buffer.slice(input.byteOffset, input.byteOffset + input.byteLength));
+    return input.buffer.slice(input.byteOffset, input.byteOffset + input.byteLength);
   }
 
-  return Promise.reject(new Error("Неподдерживаемый формат входа для инициализации WASM."));
+  throw new Error("Неподдерживаемый формат входа для инициализации WASM.");
 }
 
 function copy_uint32_array(values) {
-  const pointer = wasm_exports.alloc_bytes(values.byteLength, Uint32Array.BYTES_PER_ELEMENT);
+  const pointer = wasm_exports.alloc_bytes(values.byteLength);
   new Uint32Array(get_memory().buffer, pointer, values.length).set(values);
   return pointer;
 }
 
 function copy_float64_array(values) {
-  const pointer = wasm_exports.alloc_bytes(values.byteLength, Float64Array.BYTES_PER_ELEMENT);
+  const pointer = wasm_exports.alloc_bytes(values.byteLength);
   new Float64Array(get_memory().buffer, pointer, values.length).set(values);
   return pointer;
 }
 
 function alloc_uint32(count = 1) {
-  return wasm_exports.alloc_bytes(count * Uint32Array.BYTES_PER_ELEMENT, Uint32Array.BYTES_PER_ELEMENT);
+  return wasm_exports.alloc_bytes(count * Uint32Array.BYTES_PER_ELEMENT);
 }
 
 function alloc_float64(count = 1) {
-  return wasm_exports.alloc_bytes(count * Float64Array.BYTES_PER_ELEMENT, Float64Array.BYTES_PER_ELEMENT);
+  return wasm_exports.alloc_bytes(count * Float64Array.BYTES_PER_ELEMENT);
 }
 
 function map_error_code(error_code) {
@@ -150,6 +151,8 @@ export function shortest_path_wasm(node_count, from, to, weights, start, target)
   const distance = new Float64Array(get_memory().buffer, distance_pointer, 1)[0];
   const visited_count = new Uint32Array(get_memory().buffer, visited_count_pointer, 1)[0];
   const read_out_time = performance.now() - read_started;
+
+  console.info("READ STARTED: ", read_out_time)
 
   return {
     found,

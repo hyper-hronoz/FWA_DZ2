@@ -49,9 +49,9 @@ cmake_ninja_workdir = /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/
 
 build cmake_object_order_depends_target_path_finder_wasm: phony || .
 
-build CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj: CXX_COMPILER__path_finder_wasm_unscanned_Release /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/cpp-wasm/graph.cpp || cmake_object_order_depends_target_path_finder_wasm
+build CMakeFiles/path_finder_wasm.dir/cpp-wasm/Graph.cpp.obj: CXX_COMPILER__path_finder_wasm_unscanned_Release /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/cpp-wasm/Graph.cpp || cmake_object_order_depends_target_path_finder_wasm
   CONFIG = Release
-  DEP_FILE = CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj.d
+  DEP_FILE = CMakeFiles/path_finder_wasm.dir/cpp-wasm/Graph.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++20 -O3 -fno-exceptions -fno-rtti
   OBJECT_DIR = CMakeFiles/path_finder_wasm.dir
   OBJECT_FILE_DIR = CMakeFiles/path_finder_wasm.dir/cpp-wasm
@@ -59,9 +59,9 @@ build CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj: CXX_COMPILER__path
   TARGET_PDB = /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/path_finder_wasm.dir
 
-build CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj: CXX_COMPILER__path_finder_wasm_unscanned_Release /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/cpp-wasm/shortest_path_finder.cpp || cmake_object_order_depends_target_path_finder_wasm
+build CMakeFiles/path_finder_wasm.dir/cpp-wasm/Shortest_Path_Finder.cpp.obj: CXX_COMPILER__path_finder_wasm_unscanned_Release /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/cpp-wasm/Shortest_Path_Finder.cpp || cmake_object_order_depends_target_path_finder_wasm
   CONFIG = Release
-  DEP_FILE = CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj.d
+  DEP_FILE = CMakeFiles/path_finder_wasm.dir/cpp-wasm/Shortest_Path_Finder.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++20 -O3 -fno-exceptions -fno-rtti
   OBJECT_DIR = CMakeFiles/path_finder_wasm.dir
   OBJECT_FILE_DIR = CMakeFiles/path_finder_wasm.dir/cpp-wasm
@@ -79,9 +79,9 @@ build CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj: CXX_COMPILE
   TARGET_PDB = /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/path_finder_wasm.dir
 
-build CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj: CXX_COMPILER__path_finder_wasm_unscanned_Release /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/cpp-wasm/path_finder.cpp || cmake_object_order_depends_target_path_finder_wasm
+build CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj: CXX_COMPILER__path_finder_wasm_unscanned_Release /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/cpp-wasm/Path_Finder.cpp || cmake_object_order_depends_target_path_finder_wasm
   CONFIG = Release
-  DEP_FILE = CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj.d
+  DEP_FILE = CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++20 -O3 -fno-exceptions -fno-rtti
   OBJECT_DIR = CMakeFiles/path_finder_wasm.dir
   OBJECT_FILE_DIR = CMakeFiles/path_finder_wasm.dir/cpp-wasm
@@ -97,7 +97,7 @@ build CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj: CXX_COMPILER
 #############################################
 # Link the executable /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm
 
-build /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm: CXX_EXECUTABLE_LINKER__path_finder_wasm_Release CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj
+build /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm: CXX_EXECUTABLE_LINKER__path_finder_wasm_Release CMakeFiles/path_finder_wasm.dir/cpp-wasm/Graph.cpp.obj CMakeFiles/path_finder_wasm.dir/cpp-wasm/Shortest_Path_Finder.cpp.obj CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj CMakeFiles/path_finder_wasm.dir/cpp-wasm/Path_Finder.cpp.obj
   CONFIG = Release
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--no-entry -Wl,--export-memory -Wl,--initial-memory=134217728 -Wl,--max-memory=268435456 -Wl,--export=alloc_bytes -Wl,--export=reset_allocator -Wl,--export=run_shortest_path
