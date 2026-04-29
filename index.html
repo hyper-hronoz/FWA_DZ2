@@ -3,141 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сравнение JS и WASM для поиска кратчайшего пути</title>
-    <meta
-      name="description"
-      content="Домашняя работа №2: сравнение скорости поиска кратчайшего пути в графе дорог на JavaScript и WebAssembly."
-    />
   </head>
-  <body>
-    <div class="page-shell">
-      <header class="hero">
-        <p class="eyebrow">FWA • Домашняя работа №2</p>
-        <h1>Поиск кратчайшего пути: <span>JavaScript</span> против <span>WebAssembly</span></h1>
-        <p class="hero-copy">
-          Генератор строит большой связный граф дорог, затем одна и та же задача решается
-          алгоритмом Дейкстры в двух реализациях: на <code>JavaScript</code> и в
-          <code>Rust/WebAssembly</code>. Время считается в браузере через
-          <code>performance.now()</code>.
-        </p>
+  <body class="bg-body-tertiary">
+    <div class="container py-4 py-lg-5">
+
+      <header class="card border-0 shadow-sm mb-4">
+        <h1 class="display-5 fw-bold mb-3">Поиск кратчайшего пути: JavaScript против WebAssembly</h1>
       </header>
 
-      <main class="layout">
-        <section class="panel controls-panel">
-          <div class="panel-heading">
-            <h2>Параметры эксперимента</h2>
-            <p>Рекомендуемый минимум по условию: от 10 000 вершин.</p>
-          </div>
+      <main class="row g-4">
+        <section class="col-12 col-xl-5">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
 
-          <form id="benchmark-form" class="controls-grid">
-            <label>
-              <span>Количество вершин</span>
-              <input id="node-count" name="nodeCount" type="number" min="10000" max="100000" step="1000" value="20000" />
-            </label>
+              <form id="benchmark-form" class="row g-3">
+                <h2 class="h4 mb-1">Параметры эксперимента</h2>
 
-            <label>
-              <span>Средняя степень</span>
-              <input id="average-degree" name="averageDegree" type="number" min="2" max="20" step="1" value="6" />
-            </label>
+                <div class="col-12 col-md-6">
+                  <label for="node-count" class="form-label">Количество вершин</label>
+                  <input
+                    id="node-count"
+                    name="node_count"
+                    type="number"
+                    min="10000"
+                    max="100000"
+                    step="1000"
+                    value="20000"
+                    class="form-control"
+                  />
+                </div>
 
-            <label>
-              <span>Повторов замера</span>
-              <input id="runs" name="runs" type="number" min="1" max="20" step="1" value="4" />
-            </label>
+                <div class="col-12 col-md-6">
+                  <label for="average-degree" class="form-label">Средняя степень</label>
+                  <input
+                    id="average-degree"
+                    name="average_degree"
+                    type="number"
+                    min="2"
+                    max="20"
+                    step="1"
+                    value="6"
+                    class="form-control"
+                  />
+                </div>
 
-            <label>
-              <span>Seed генератора</span>
-              <input id="seed" name="seed" type="number" min="1" max="4294967295" step="1" value="20260419" />
-            </label>
+                <div class="col-12 col-md-6">
+                  <label for="runs" class="form-label">Повторов замера</label>
+                  <input id="runs" name="runs" type="number" min="1" max="20" step="1" value="4" class="form-control" />
+                </div>
 
-            <div class="button-row">
-              <button id="run-button" type="submit">Сгенерировать граф и сравнить</button>
-              <button id="preset-button" type="button" class="ghost-button">Нагрузочный пресет</button>
-            </div>
-          </form>
+                <div class="col-12 col-md-6">
+                  <label for="seed" class="form-label">Seed генератора</label>
+                  <input
+                    id="seed"
+                    name="seed"
+                    type="number"
+                    min="1"
+                    max="4294967295"
+                    step="1"
+                    value="20260419"
+                    class="form-control"
+                  />
+                </div>
 
-          <div class="status-box">
-            <div class="status-line">
-              <span class="status-label">Состояние</span>
-              <strong id="status-text">Инициализация WebAssembly...</strong>
-            </div>
-            <div class="status-line">
-              <span class="status-label">Маршрут</span>
-              <strong id="route-text">Ожидание запуска</strong>
+                <div class="col-12 d-flex flex-column flex-sm-row gap-2 pt-2">
+                  <button id="run-button" type="submit" class="btn btn-primary flex-fill">Сгенерировать граф и сравнить</button>
+                  <button id="preset-button" type="button" class="btn btn-outline-secondary">Нагрузочный пресет</button>
+                </div>
+              </form>
+
             </div>
           </div>
         </section>
 
-        <section class="panel dataset-panel">
-          <div class="panel-heading">
-            <h2>Данные графа</h2>
-            <p>Обе реализации получают один и тот же набор входных данных.</p>
-          </div>
+        <section class="col-12 col-xl-7">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="mb-4">
+                <h2 class="h4 mb-1">Данные графа</h2>
+                <p class="text-secondary mb-0">Обе реализации получают один и тот же набор входных данных.</p>
+              </div>
 
-          <div class="stats-grid" id="dataset-stats">
-            <article class="stat-card">
-              <span>Вершины</span>
-              <strong id="nodes-stat">0</strong>
-            </article>
-            <article class="stat-card">
-              <span>Дорог</span>
-              <strong id="edges-stat">0</strong>
-            </article>
-            <article class="stat-card">
-              <span>Направленных рёбер</span>
-              <strong id="directed-stat">0</strong>
-            </article>
-            <article class="stat-card">
-              <span>Время генерации</span>
-              <strong id="generation-stat">0 мс</strong>
-            </article>
+              <div class="row g-3 mb-4" id="dataset-stats">
+                <article class="col-12 col-md-6">
+                  <div class="card h-100 bg-body-tertiary border-0">
+                    <div class="card-body">
+                      <span class="text-secondary">Вершины</span>
+                      <strong id="nodes-stat" class="d-block fs-3 mt-2">0</strong>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-12 col-md-6">
+                  <div class="card h-100 bg-body-tertiary border-0">
+                    <div class="card-body">
+                      <span class="text-secondary">Дорог</span>
+                      <strong id="edges-stat" class="d-block fs-3 mt-2">0</strong>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-12 col-md-6">
+                  <div class="card h-100 bg-body-tertiary border-0">
+                    <div class="card-body">
+                      <span class="text-secondary">Направленных рёбер</span>
+                      <strong id="directed-stat" class="d-block fs-3 mt-2">0</strong>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-12 col-md-6">
+                  <div class="card h-100 bg-body-tertiary border-0">
+                    <div class="card-body">
+                      <span class="text-secondary">Время генерации</span>
+                      <strong id="generation-stat" class="d-block fs-3 mt-2">0 мс</strong>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div class="log-box">
-            <h3>Ход эксперимента</h3>
-            <ul id="log-list"></ul>
+        <section class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="mb-4">
+                <h2 class="h4 mb-1">Результаты</h2>
+              </div>
+
+              <div class="row g-4">
+                <article class="col-12 col-lg-6">
+                  <div class="card h-100 border-warning-subtle">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                        <span class="text-secondary">JavaScript</span>
+                        <strong id="js-avg" class="fs-4">0 мс</strong>
+                      </div>
+                      <div class="progress mb-3" role="progressbar" aria-label="JavaScript average runtime">
+                        <div id="js-bar" class="progress-bar bg-warning" style="width: 0%"></div>
+                      </div>
+                      <div id="js-details" class="d-flex flex-wrap gap-2">
+                        <span class="badge rounded-pill text-bg-light border text-secondary-emphasis fw-normal py-2 px-3">Нет данных</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-lg-6">
+                  <div class="card h-100 border-primary-subtle">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                        <span class="text-secondary">WebAssembly (C++)</span>
+                        <strong id="wasm-avg" class="fs-4">0 мс</strong>
+                      </div>
+                      <div class="progress mb-3" role="progressbar" aria-label="WebAssembly average runtime">
+                        <div id="wasm-bar" class="progress-bar bg-primary" style="width: 0%"></div>
+                      </div>
+                      <div id="wasm-details" class="d-flex flex-wrap gap-2">
+                        <span class="badge rounded-pill text-bg-light border text-secondary-emphasis fw-normal py-2 px-3">Нет данных</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
           </div>
         </section>
 
-        <section class="panel results-panel">
-          <div class="panel-heading">
-            <h2>Результаты</h2>
-            <p>Сравнение среднего времени выполнения и итоговых расстояний.</p>
-          </div>
-
-          <div class="results-grid">
-            <article class="result-card js-card">
-              <div class="result-header">
-                <span>JavaScript</span>
-                <strong id="js-avg">0 мс</strong>
-              </div>
-              <div class="bar-track">
-                <div id="js-bar" class="bar-fill js-bar"></div>
-              </div>
-              <div id="js-details" class="result-meta">
-                <span>Нет данных</span>
-              </div>
-            </article>
-
-            <article class="result-card wasm-card">
-              <div class="result-header">
-                <span>WebAssembly (Rust)</span>
-                <strong id="wasm-avg">0 мс</strong>
-              </div>
-              <div class="bar-track">
-                <div id="wasm-bar" class="bar-fill wasm-bar"></div>
-              </div>
-              <div id="wasm-details" class="result-meta">
-                <span>Нет данных</span>
-              </div>
-            </article>
-          </div>
-
-          <div class="summary-card">
-            <h3>Итог</h3>
-            <p id="summary-text">Запустите эксперимент, чтобы получить сравнение.</p>
-          </div>
-        </section>
       </main>
     </div>
 

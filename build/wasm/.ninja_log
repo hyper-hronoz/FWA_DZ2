@@ -1,0 +1,11 @@
+# ninja log v7
+5	1773	1777475913975370153	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
+2353	2437	1777475916321905652	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	56b6dd8dcb6d0bfb
+4	1811	1777475913972886218	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
+5	2353	1777475913973886227	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
+5	1793	1777475913975039670	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
+7	1720	1777476162053244277	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
+7	1722	1777476162053026647	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
+6	1760	1777476162050938527	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
+7	2277	1777476162051938535	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
+2277	2358	1777476164321957314	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	56b6dd8dcb6d0bfb

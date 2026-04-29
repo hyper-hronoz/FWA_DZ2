@@ -1,0 +1,3 @@
+/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/path_finder_wasm.dir
+/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/edit_cache.dir
+/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/rebuild_cache.dir

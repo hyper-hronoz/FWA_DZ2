@@ -3,7 +3,7 @@
 Сравнение скорости поиска кратчайшего пути в графе дорог в браузере:
 
 - `JavaScript`
-- `WebAssembly`, собранный из `Rust`
+- `WebAssembly`, собранный из `C++`
 
 В обеих реализациях используется алгоритм Дейкстры для взвешенного связного графа с неотрицательными весами.
 
@@ -20,9 +20,8 @@
 Требования:
 
 - `Node.js`
-- `Rust`
-- `wasm-bindgen-cli`
-- target `wasm32-unknown-unknown`
+- `clang++` с поддержкой target `wasm32`
+- `wasm-ld`/`lld`
 
 Команды:
 
@@ -62,6 +61,5 @@ npm run preview
 - [src/main.js](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/src/main.js)
 - [src/graph.js](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/src/graph.js)
 - [src/style.css](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/src/style.css)
-- [rust-wasm/Cargo.toml](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/rust-wasm/Cargo.toml)
-- [rust-wasm/src/lib.rs](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/rust-wasm/src/lib.rs)
+- [cpp-wasm/path_finder.cpp](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/cpp-wasm/path_finder.cpp)
 - [scripts/build-wasm.sh](/home/hronoz/Desktop/BMSTU_FWA/FWA_DZ_2/scripts/build-wasm.sh)

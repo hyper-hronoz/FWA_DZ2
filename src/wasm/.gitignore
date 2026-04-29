@@ -1,2 +1,4 @@
 *
 !.gitignore
+!path_finder_wasm.js
+!*.keep

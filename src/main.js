@@ -1,319 +1,301 @@
-import "./style.css";
-import { generateRoadGraph, shortestPathJs } from "./graph.js";
-import initWasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const form = document.querySelector("#benchmark-form");
-const runButton = document.querySelector("#run-button");
-const presetButton = document.querySelector("#preset-button");
-const statusText = document.querySelector("#status-text");
-const routeText = document.querySelector("#route-text");
-const logList = document.querySelector("#log-list");
-const summaryText = document.querySelector("#summary-text");
+import { generate_road_graph } from "./Graph_Generator.js";
+import { shortest_path_js } from "./Shortest_Path_Finder.js";
+import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
 
-const datasetFields = {
-  nodes: document.querySelector("#nodes-stat"),
-  edges: document.querySelector("#edges-stat"),
-  directed: document.querySelector("#directed-stat"),
-  generation: document.querySelector("#generation-stat")
-};
+(() => {
+  class UI_context {
+    constructor() {
+      this.form = document.querySelector("#benchmark-form");
+      this.controls = {
+        run_button: document.querySelector("#run-button"),
+        preset_button: document.querySelector("#preset-button")
+      };
+      this.dataset_fields = {
+        nodes: document.querySelector("#nodes-stat"),
+        edges: document.querySelector("#edges-stat"),
+        directed: document.querySelector("#directed-stat"),
+        generation: document.querySelector("#generation-stat")
+      };
+      this.result_fields = {
+        js_average: document.querySelector("#js-avg"),
+        js_details: document.querySelector("#js-details"),
+        js_bar: document.querySelector("#js-bar"),
+        wasm_average: document.querySelector("#wasm-avg"),
+        wasm_details: document.querySelector("#wasm-details"),
+        wasm_bar: document.querySelector("#wasm-bar")
+      };
+    }
 
-const resultFields = {
-  jsAverage: document.querySelector("#js-avg"),
-  wasmAverage: document.querySelector("#wasm-avg"),
-  jsDetails: document.querySelector("#js-details"),
-  wasmDetails: document.querySelector("#wasm-details"),
-  jsBar: document.querySelector("#js-bar"),
-  wasmBar: document.querySelector("#wasm-bar")
-};
+    read_configuration() {
+      const form_data = new FormData(this.form);
+      const node_count = Number(form_data.get("node_count"));
+      const average_degree = Number(form_data.get("average_degree"));
+      const runs = Number(form_data.get("runs"));
+      const seed = Number(form_data.get("seed"));
 
-let wasmReady = false;
+      return {
+        node_count: Math.max(10000, Math.min(100000, Math.trunc(node_count))),
+        average_degree: Math.max(2, Math.min(20, Math.trunc(average_degree))),
+        runs: Math.max(1, Math.min(10, Math.trunc(runs))),
+        seed: Math.max(1, Math.min(4294967295, Math.trunc(seed)))
+      };
+    }
 
-function setStatus(text) {
-  statusText.textContent = text;
-}
+    write_configuration(config) {
+      this.form.elements.namedItem("node_count").value = String(config.node_count);
+      this.form.elements.namedItem("average_degree").value = String(config.average_degree);
+      this.form.runs.value = String(config.runs);
+      this.form.seed.value = String(config.seed);
+    }
 
-function addLog(message) {
-  const item = document.createElement("li");
-  item.textContent = message;
-  logList.prepend(item);
+    reset_result_bars() {
+      this.result_fields.js_bar.style.width = "0%";
+      this.result_fields.wasm_bar.style.width = "0%";
+    }
 
-  while (logList.children.length > 8) {
-    logList.removeChild(logList.lastElementChild);
-  }
-}
+    render_dataset(graph, generation_time) {
+      this.dataset_fields.nodes.textContent = format_integer(graph.node_count);
+      this.dataset_fields.edges.textContent = format_integer(graph.undirected_edge_count);
+      this.dataset_fields.directed.textContent = format_integer(graph.directed_edge_count);
+      this.dataset_fields.generation.textContent = format_milliseconds(generation_time);
+    }
 
-function formatInteger(value) {
-  return new Intl.NumberFormat("ru-RU").format(value);
-}
-
-function formatMilliseconds(value) {
-  return `${value.toFixed(2)} мс`;
-}
-
-function formatDistance(value) {
-  if (value === null || !Number.isFinite(value)) {
-    return "пути нет";
-  }
-
-  return value.toFixed(2);
-}
-
-function renderDetailItems(container, items) {
-  container.replaceChildren();
-
-  for (const item of items) {
-    const element = document.createElement("span");
-    element.textContent = item;
-    container.appendChild(element);
-  }
-}
-
-function readConfiguration() {
-  const formData = new FormData(form);
-  const nodeCount = Number(formData.get("nodeCount"));
-  const averageDegree = Number(formData.get("averageDegree"));
-  const runs = Number(formData.get("runs"));
-  const seed = Number(formData.get("seed"));
-
-  return {
-    nodeCount: Math.max(10000, Math.min(100000, Math.trunc(nodeCount))),
-    averageDegree: Math.max(2, Math.min(20, Math.trunc(averageDegree))),
-    runs: Math.max(1, Math.min(10, Math.trunc(runs))),
-    seed: Math.max(1, Math.min(4294967295, Math.trunc(seed)))
-  };
-}
-
-function writeConfiguration(config) {
-  form.nodeCount.value = String(config.nodeCount);
-  form.averageDegree.value = String(config.averageDegree);
-  form.runs.value = String(config.runs);
-  form.seed.value = String(config.seed);
-}
-
-function resetResultBars() {
-  resultFields.jsBar.style.width = "0%";
-  resultFields.wasmBar.style.width = "0%";
-}
-
-function renderDataset(graph, generationTime) {
-  datasetFields.nodes.textContent = formatInteger(graph.nodeCount);
-  datasetFields.edges.textContent = formatInteger(graph.undirectedEdgeCount);
-  datasetFields.directed.textContent = formatInteger(graph.directedEdgeCount);
-  datasetFields.generation.textContent = formatMilliseconds(generationTime);
-  routeText.textContent = `${formatInteger(graph.start)} -> ${formatInteger(graph.target)}`;
-}
-
-function calculateAverage(values) {
-  return values.reduce((sum, value) => sum + value, 0) / values.length;
-}
-
-function nextFrame() {
-  return new Promise((resolve) => {
-    requestAnimationFrame(() => resolve());
-  });
-}
-
-function approximatelyEqual(left, right) {
-  if (left === right) {
-    return true;
-  }
-
-  if (left === null || right === null) {
-    return false;
-  }
-
-  return Math.abs(left - right) < 1e-9;
-}
-
-function validateResults(jsResult, wasmResult) {
-  if (jsResult.found !== wasmResult.found) {
-    throw new Error("JS и WASM вернули разные признаки существования пути.");
-  }
-
-  if (!approximatelyEqual(jsResult.distance, wasmResult.distance)) {
-    throw new Error("JS и WASM вычислили разные расстояния.");
-  }
-
-  if (jsResult.pathLength !== wasmResult.path_length) {
-    throw new Error("JS и WASM вычислили разные длины маршрута.");
-  }
-
-  if (jsResult.visitedCount !== wasmResult.visited_count) {
-    throw new Error("JS и WASM посетили разное количество вершин.");
-  }
-
-  if (jsResult.pathNodes.length !== wasmResult.path_nodes.length) {
-    throw new Error("JS и WASM построили пути разной длины.");
-  }
-
-  for (let index = 0; index < jsResult.pathNodes.length; index += 1) {
-    if (jsResult.pathNodes[index] !== wasmResult.path_nodes[index]) {
-      throw new Error("JS и WASM построили разные кратчайшие пути.");
+    set_running_state(is_running) {
+      this.controls.run_button.disabled = is_running;
+      this.controls.preset_button.disabled = is_running;
+      this.controls.run_button.classList.toggle("disabled", is_running);
+      this.controls.preset_button.classList.toggle("disabled", is_running);
     }
   }
-}
 
-function renderResults(jsRuns, wasmRuns, jsResult, wasmResult) {
-  const jsAverage = calculateAverage(jsRuns);
-  const wasmAverage = calculateAverage(wasmRuns);
-  const maxValue = Math.max(jsAverage, wasmAverage, 1);
-  const speedup = jsAverage / wasmAverage;
+  const ui_context = new UI_context();
 
-  resultFields.jsAverage.textContent = formatMilliseconds(jsAverage);
-  resultFields.wasmAverage.textContent = formatMilliseconds(wasmAverage);
-  renderDetailItems(resultFields.jsDetails, [
-    `Расстояние: ${formatDistance(jsResult.distance)}`,
-    `Длина пути: ${formatInteger(jsResult.pathLength)}`,
-    `Посещено вершин: ${formatInteger(jsResult.visitedCount)}`
-  ]);
-  renderDetailItems(resultFields.wasmDetails, [
-    `Расстояние: ${formatDistance(wasmResult.distance)}`,
-    `Длина пути: ${formatInteger(wasmResult.path_length)}`,
-    `Посещено вершин: ${formatInteger(wasmResult.visited_count)}`
-  ]);
-  resultFields.jsBar.style.width = `${(jsAverage / maxValue) * 100}%`;
-  resultFields.wasmBar.style.width = `${(wasmAverage / maxValue) * 100}%`;
+  let is_wasm_ready = false;
 
-  if (speedup > 1) {
-    summaryText.textContent = `WASM быстрее JavaScript в ${speedup.toFixed(2)} раза(раз).`;
-  } else if (speedup < 1) {
-    summaryText.textContent = `JavaScript быстрее WASM в ${(1 / speedup).toFixed(2)} раза(раз).`;
-  } else {
-    summaryText.textContent = "Среднее время выполнения оказалось одинаковым.";
-  }
-}
-
-function setRunningState(isRunning) {
-  runButton.disabled = isRunning;
-  presetButton.disabled = isRunning;
-}
-
-async function benchmarkImplementation(label, runner, graph) {
-  const startTime = performance.now();
-  const result = await runner(graph);
-  const elapsed = performance.now() - startTime;
-  addLog(`${label}: ${formatMilliseconds(elapsed)}`);
-  return { elapsed, result };
-}
-
-async function runBenchmark(event) {
-  event.preventDefault();
-
-  if (!wasmReady) {
-    setStatus("WASM ещё не инициализирован.");
-    return;
+  const format_integer = (value) => {
+    return new Intl.NumberFormat("ru-RU").format(value);
   }
 
-  const config = readConfiguration();
-  setRunningState(true);
-  resetResultBars();
-  summaryText.textContent = "Выполняется эксперимент...";
-  logList.replaceChildren();
+  const format_milliseconds = (value) => {
+    return `${value.toFixed(2)} мс`;
+  }
 
-  try {
-    setStatus("Генерация графа...");
-    await nextFrame();
+  const format_distance = (value) => {
+    if (value === null || !Number.isFinite(value)) {
+      return "нет пути";
+    }
 
-    const generationStarted = performance.now();
-    const graph = generateRoadGraph(config);
-    const generationTime = performance.now() - generationStarted;
+    return value.toFixed(2);
+  }
 
-    renderDataset(graph, generationTime);
-    addLog(`Сгенерирован граф: ${formatInteger(graph.nodeCount)} вершин, ${formatInteger(graph.undirectedEdgeCount)} дорог.`);
-    addLog(`Маршрут: ${graph.start} -> ${graph.target}.`);
+  const render_detail_items = (container, items) => {
+    container.replaceChildren();
 
-    setStatus("Прогрев реализаций...");
-    await nextFrame();
+    for (const item of items) {
+      const element = document.createElement("span");
+      element.className = "badge rounded-pill text-bg-light border text-secondary-emphasis fw-normal py-2 px-3";
+      element.textContent = item;
+      container.appendChild(element);
+    }
+  }
 
-    shortestPathJs(graph.nodeCount, graph.from, graph.to, graph.weights, graph.start, graph.target, graph.csr);
-    shortest_path_wasm(graph.nodeCount, graph.from, graph.to, graph.weights, graph.start, graph.target);
+  const calculate_average = (values) => {
+    return values.reduce((sum, value) => sum + value, 0) / values.length;
+  }
 
-    const jsRuns = [];
-    const wasmRuns = [];
-    let jsResult = null;
-    let wasmResult = null;
+  function approximately_equal(left, right) {
+    if (left === right) {
+      return true;
+    }
 
-    for (let runIndex = 0; runIndex < config.runs; runIndex += 1) {
-      setStatus(`Замер ${runIndex + 1} из ${config.runs}...`);
-      await nextFrame();
+    if (left === null || right === null) {
+      return false;
+    }
 
-      const jsRunner = (currentGraph) =>
-        Promise.resolve(
-          shortestPathJs(
-            currentGraph.nodeCount,
-            currentGraph.from,
-            currentGraph.to,
-            currentGraph.weights,
-            currentGraph.start,
-            currentGraph.target,
-            currentGraph.csr
-          )
-        );
-      const wasmRunner = (currentGraph) =>
-        Promise.resolve(
-          shortest_path_wasm(
-            currentGraph.nodeCount,
-            currentGraph.from,
-            currentGraph.to,
-            currentGraph.weights,
-            currentGraph.start,
-            currentGraph.target
-          )
-        );
+    return Math.abs(left - right) < 1e-9;
+  }
 
-      const first = runIndex % 2 === 0 ? ["JS", jsRunner] : ["WASM", wasmRunner];
-      const second = runIndex % 2 === 0 ? ["WASM", wasmRunner] : ["JS", jsRunner];
+  function validate_results(js_result, wasm_result) {
+    if (js_result.found !== wasm_result.found) {
+      throw new Error("JS и WASM вернули разные признаки существования пути.");
+    }
 
-      const firstMeasurement = await benchmarkImplementation(first[0], first[1], graph);
-      const secondMeasurement = await benchmarkImplementation(second[0], second[1], graph);
+    if (!approximately_equal(js_result.distance, wasm_result.distance)) {
+      throw new Error("JS и WASM вычислили разные расстояния.");
+    }
 
-      if (first[0] === "JS") {
-        jsRuns.push(firstMeasurement.elapsed);
-        wasmRuns.push(secondMeasurement.elapsed);
-        jsResult = firstMeasurement.result;
-        wasmResult = secondMeasurement.result;
-      } else {
-        wasmRuns.push(firstMeasurement.elapsed);
-        jsRuns.push(secondMeasurement.elapsed);
-        wasmResult = firstMeasurement.result;
-        jsResult = secondMeasurement.result;
+    if (js_result.path_length !== wasm_result.path_length) {
+      throw new Error("JS и WASM вычислили разные длины маршрута.");
+    }
+
+    if (js_result.visited_count !== wasm_result.visited_count) {
+      throw new Error("JS и WASM посетили разное количество вершин.");
+    }
+
+    if (js_result.path_nodes.length !== wasm_result.path_nodes.length) {
+      throw new Error("JS и WASM построили пути разной длины.");
+    }
+
+    for (let index = 0; index < js_result.path_nodes.length; index += 1) {
+      if (js_result.path_nodes[index] !== wasm_result.path_nodes[index]) {
+        throw new Error("JS и WASM построили разные кратчайшие пути.");
+      }
+    }
+  }
+
+  function render_results(js_runs, wasm_runs, js_result, wasm_result) {
+    const js_average = calculate_average(js_runs);
+    const wasm_average = calculate_average(wasm_runs);
+    const max_value = Math.max(js_average, wasm_average, 1);
+
+    ui_context.result_fields.js_average.textContent = format_milliseconds(js_average);
+    ui_context.result_fields.wasm_average.textContent = format_milliseconds(wasm_average);
+    render_detail_items(ui_context.result_fields.js_details, [
+      `Расстояние: ${format_distance(js_result.distance)}`,
+      `Длина пути: ${format_integer(js_result.path_length)}`,
+      `Посещено вершин: ${format_integer(js_result.visited_count)}`
+    ]);
+    render_detail_items(ui_context.result_fields.wasm_details, [
+      `Передача: ${format_milliseconds(wasm_result.timings.transfer)}`,
+      `Расчёт: ${format_milliseconds(wasm_result.timings.compute)}`,
+      `Расстояние: ${format_distance(wasm_result.distance)}`,
+      `Длина пути: ${format_integer(wasm_result.path_length)}`,
+      `Посещено вершин: ${format_integer(wasm_result.visited_count)}`
+    ]);
+    ui_context.result_fields.js_bar.style.width = `${(js_average / max_value) * 100}%`;
+    ui_context.result_fields.wasm_bar.style.width = `${(wasm_average / max_value) * 100}%`;
+  }
+
+  async function benchmark_implementation(label, runner, graph) {
+    const start_time = performance.now();
+    const result = await runner(graph);
+    const elapsed = performance.now() - start_time;
+    console.log(`${label}: ${format_milliseconds(elapsed)}`);
+    return { elapsed, result };
+  }
+
+  const run_benchmark = async (event) => {
+    event.preventDefault();
+
+    if (!is_wasm_ready) {
+      console.error("WASM IS NOT LOADED")
+      return;
+    }
+
+    const config = ui_context.read_configuration();
+    ui_context.set_running_state(true);
+    ui_context.reset_result_bars();
+
+    try {
+      const generation_started = performance.now();
+      const graph = generate_road_graph(config);
+      const generation_time = performance.now() - generation_started;
+
+      ui_context.render_dataset(graph, generation_time);
+
+      console.log(`Сгенерирован граф: ${format_integer(graph.node_count)} вершин, ${format_integer(graph.undirected_edge_count)} дорог.`);
+      console.log(`Маршрут: ${graph.start} -> ${graph.target}.`);
+
+      shortest_path_js(graph.node_count, graph.from, graph.to, graph.weights, graph.start, graph.target);
+      shortest_path_wasm(graph.node_count, graph.from, graph.to, graph.weights, graph.start, graph.target);
+
+      const js_runs = [];
+      const wasm_runs = [];
+      const js_timing_runs = [];
+      const wasm_timing_runs = [];
+      let js_result = null;
+      let wasm_result = null;
+
+      for (let run_index = 0; run_index < config.runs; run_index += 1) {
+        const js_runner = (current_graph) =>
+          Promise.resolve(
+            shortest_path_js(
+              current_graph.node_count,
+              current_graph.from,
+              current_graph.to,
+              current_graph.weights,
+              current_graph.start,
+              current_graph.target
+            )
+          );
+        const wasm_runner = (current_graph) =>
+          Promise.resolve(
+            shortest_path_wasm(
+              current_graph.node_count,
+              current_graph.from,
+              current_graph.to,
+              current_graph.weights,
+              current_graph.start,
+              current_graph.target
+            )
+          );
+
+        const first = run_index % 2 === 0 ? ["JS", js_runner] : ["WASM", wasm_runner];
+        const second = run_index % 2 === 0 ? ["WASM", wasm_runner] : ["JS", js_runner];
+
+        const first_measurement = await benchmark_implementation(first[0], first[1], graph);
+        const second_measurement = await benchmark_implementation(second[0], second[1], graph);
+
+        if (first[0] === "JS") {
+          js_runs.push(first_measurement.elapsed);
+          js_result = first_measurement.result;
+          js_timing_runs.push(first_measurement.result.timings);
+
+          wasm_runs.push(second_measurement.elapsed);
+          wasm_result = second_measurement.result;
+          wasm_timing_runs.push(second_measurement.result.timings);
+        } else {
+          js_runs.push(second_measurement.elapsed);
+          js_result = second_measurement.result;
+          js_timing_runs.push(second_measurement.result.timings);
+
+          wasm_runs.push(first_measurement.elapsed);
+          wasm_result = first_measurement.result;
+          wasm_timing_runs.push(first_measurement.result.timings);
+        }
+
+        validate_results(js_result, wasm_result);
       }
 
-      validateResults(jsResult, wasmResult);
+      js_result.timings = {
+        build: calculate_average(js_timing_runs.map((timing) => timing.build)),
+        compute: calculate_average(js_timing_runs.map((timing) => timing.compute))
+      };
+      wasm_result.timings = {
+        transfer: calculate_average(wasm_timing_runs.map((timing) => timing.transfer)),
+        compute: calculate_average(wasm_timing_runs.map((timing) => timing.compute))
+      };
+
+      render_results(js_runs, wasm_runs, js_result, wasm_result);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      ui_context.set_running_state(false);
     }
-
-    renderResults(jsRuns, wasmRuns, jsResult, wasmResult);
-    setStatus("Эксперимент завершён.");
-  } catch (error) {
-    console.error(error);
-    setStatus("Ошибка во время эксперимента.");
-    summaryText.textContent = error instanceof Error ? error.message : String(error);
-  } finally {
-    setRunningState(false);
   }
-}
 
-async function initializeWasm() {
-  try {
-    await initWasm();
-    wasmReady = true;
-    setStatus("WebAssembly готов к запуску.");
-    addLog("WASM-модуль загружен.");
-  } catch (error) {
-    console.error(error);
-    setStatus("Не удалось инициализировать WebAssembly.");
-    summaryText.textContent = "Сборка WASM отсутствует или не загрузилась. Выполните `npm run wasm:build`.";
+  const initialize_wasm = async () => {
+    try {
+      await init_wasm();
+      is_wasm_ready = true;
+      console.log("WASM-модуль загружен.");
+    } catch (error) {
+      console.error(error);
+    }
   }
-}
 
-form.addEventListener("submit", runBenchmark);
-presetButton.addEventListener("click", () => {
-  writeConfiguration({
-    nodeCount: 50000,
-    averageDegree: 8,
-    runs: 3,
-    seed: 20260501
+  ui_context.form.addEventListener("submit", run_benchmark);
+
+  ui_context.controls.preset_button.addEventListener("click", () => {
+    ui_context.write_configuration({
+      node_count: 50000,
+      average_degree: 8,
+      runs: 3,
+      seed: 20260501
+    });
   });
-});
 
-initializeWasm();
+  initialize_wasm();
+})()
