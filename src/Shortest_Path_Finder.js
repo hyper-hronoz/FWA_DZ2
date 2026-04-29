@@ -1,6 +1,6 @@
 import { build_compressed_sparse_row } from "./Graph.js";
 
-class Min_Heap {
+class Emu_Priority_Queue {
   constructor() {
     this.items = [];
   }
@@ -77,53 +77,7 @@ class Min_Heap {
   }
 }
 
-/* PATH_RECONSTRUCTION_DISABLED
-function reconstruct_path_length(previous, start, target) {
-  if (target !== start && previous[target] === -1) {
-    return 0;
-  }
-
-  let length = 1;
-  let cursor = target;
-
-  while (cursor !== start) {
-    cursor = previous[cursor];
-    if (cursor === -1) {
-      return 0;
-    }
-
-    length += 1;
-  }
-
-  return length;
-}
-
-function reconstruct_path_nodes(previous, start, target) {
-  if (target !== start && previous[target] === -1) {
-    return [];
-  }
-
-  const reversed_path = [];
-  let cursor = target;
-
-  while (true) {
-    reversed_path.push(cursor);
-    if (cursor === start) {
-      break;
-    }
-
-    cursor = previous[cursor];
-    if (cursor === -1) {
-      return [];
-    }
-  }
-
-  reversed_path.reverse();
-  return reversed_path;
-}
-PATH_RECONSTRUCTION_DISABLED */
-
-export class shortest_path_finder_js {
+export class Shortest_Path_Finder {
   find_shortest_path(graph, start, target, prebuilt_csr) {
     if (start < 0 || start >= graph.node_count || target < 0 || target >= graph.node_count) {
       throw new Error("Некорректные вершины старта или финиша.");
@@ -137,13 +91,8 @@ export class shortest_path_finder_js {
     const distances = new Float64Array(graph.node_count);
     distances.fill(Number.POSITIVE_INFINITY);
 
-    /* PATH_RECONSTRUCTION_DISABLED
-    const previous = new Int32Array(graph.node_count);
-    previous.fill(-1);
-    PATH_RECONSTRUCTION_DISABLED */
-
     const visited = new Uint8Array(graph.node_count);
-    const heap = new Min_Heap();
+    const heap = new Emu_Priority_Queue();
     let visited_count = 0;
 
     const compute_started = performance.now();
@@ -178,9 +127,6 @@ export class shortest_path_finder_js {
 
         if (next_cost < distances[next_node]) {
           distances[next_node] = next_cost;
-          /* PATH_RECONSTRUCTION_DISABLED
-          previous[next_node] = node;
-          PATH_RECONSTRUCTION_DISABLED */
           heap.push(next_node, next_cost);
         }
       }
@@ -191,10 +137,6 @@ export class shortest_path_finder_js {
     return {
       found,
       distance: found ? distances[target] : null,
-      /* PATH_RECONSTRUCTION_DISABLED
-      path_length: found ? reconstruct_path_length(previous, start, target) : 0,
-      path_nodes: found ? reconstruct_path_nodes(previous, start, target) : [],
-      PATH_RECONSTRUCTION_DISABLED */
       visited_count,
       timings: {
         build: build_time,
@@ -206,6 +148,6 @@ export class shortest_path_finder_js {
 
 export function shortest_path_js(node_count, from, to, weights, start, target, prebuilt_csr) {
   const graph = { node_count, from, to, weights };
-  const finder = new shortest_path_finder_js();
+  const finder = new Shortest_Path_Finder();
   return finder.find_shortest_path(graph, start, target, prebuilt_csr);
 }

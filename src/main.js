@@ -129,22 +129,6 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
     if (js_result.visited_count !== wasm_result.visited_count) {
       throw new Error("JS и WASM посетили разное количество вершин.");
     }
-
-    /* PATH_RECONSTRUCTION_DISABLED
-    if (js_result.path_length !== wasm_result.path_length) {
-      throw new Error("JS и WASM вычислили разные длины маршрута.");
-    }
-
-    if (js_result.path_nodes.length !== wasm_result.path_nodes.length) {
-      throw new Error("JS и WASM построили пути разной длины.");
-    }
-
-    for (let index = 0; index < js_result.path_nodes.length; index += 1) {
-      if (js_result.path_nodes[index] !== wasm_result.path_nodes[index]) {
-        throw new Error("JS и WASM построили разные кратчайшие пути.");
-      }
-    }
-    PATH_RECONSTRUCTION_DISABLED */
   }
 
   function render_results(js_runs, wasm_runs, js_result, wasm_result) {
@@ -164,20 +148,6 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
       `Расстояние: ${format_distance(wasm_result.distance)}`,
       `Посещено вершин: ${format_integer(wasm_result.visited_count)}`
     ]);
-    /* PATH_RECONSTRUCTION_DISABLED
-    render_detail_items(ui_context.result_fields.js_details, [
-      `Расстояние: ${format_distance(js_result.distance)}`,
-      `Длина пути: ${format_integer(js_result.path_length)}`,
-      `Посещено вершин: ${format_integer(js_result.visited_count)}`
-    ]);
-    render_detail_items(ui_context.result_fields.wasm_details, [
-      `Передача: ${format_milliseconds(wasm_result.timings.transfer)}`,
-      `Расчёт: ${format_milliseconds(wasm_result.timings.compute)}`,
-      `Расстояние: ${format_distance(wasm_result.distance)}`,
-      `Длина пути: ${format_integer(wasm_result.path_length)}`,
-      `Посещено вершин: ${format_integer(wasm_result.visited_count)}`
-    ]);
-    PATH_RECONSTRUCTION_DISABLED */
     ui_context.result_fields.js_bar.style.width = `${(js_average / max_value) * 100}%`;
     ui_context.result_fields.wasm_bar.style.width = `${(wasm_average / max_value) * 100}%`;
   }
@@ -214,8 +184,8 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
       console.log(`Сгенерирован граф: ${format_integer(graph.node_count)} вершин, ${format_integer(graph.undirected_edge_count)} дорог.`);
       console.log(`Маршрут: ${graph.start} -> ${graph.target}.`);
 
-      shortest_path_js(graph.node_count, graph.from, graph.to, graph.weights, graph.start, graph.target);
-      shortest_path_wasm(graph.node_count, graph.from, graph.to, graph.weights, graph.start, graph.target);
+      // shortest_path_js(graph.node_count, graph.from, graph.to, graph.weights, graph.start, graph.target);
+      // shortest_path_wasm(graph.node_count, graph.from, graph.to, graph.weights, graph.start, graph.target);
 
       const js_runs = [];
       const wasm_runs = [];
@@ -224,37 +194,57 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
       let js_result = null;
       let wasm_result = null;
 
-      for (let run_index = 0; run_index < config.runs; run_index += 1) {
-        const js_runner = (current_graph) =>
-          Promise.resolve(
-            shortest_path_js(
-              current_graph.node_count,
-              current_graph.from,
-              current_graph.to,
-              current_graph.weights,
-              current_graph.start,
-              current_graph.target
-            )
-          );
-        const wasm_runner = (current_graph) =>
-          Promise.resolve(
-            shortest_path_wasm(
-              current_graph.node_count,
-              current_graph.from,
-              current_graph.to,
-              current_graph.weights,
-              current_graph.start,
-              current_graph.target
-            )
-          );
+      for (let run_index = 0; run_index < config.runs; run_index++) {
+        const js_runner = (current_graph) => shortest_path_js(
+          current_graph.node_count,
+          current_graph.from,
+          current_graph.to,
+          current_graph.weights,
+          current_graph.start,
+          current_graph.target
+        );
 
-        const first = run_index % 2 === 0 ? ["JS", js_runner] : ["WASM", wasm_runner];
-        const second = run_index % 2 === 0 ? ["WASM", wasm_runner] : ["JS", js_runner];
+        const wasm_runner = (current_graph) => shortest_path_wasm(
+          current_graph.node_count,
+          current_graph.from,
+          current_graph.to,
+          current_graph.weights,
+          current_graph.start,
+          current_graph.target
+        );
 
-        const first_measurement = await benchmark_implementation(first[0], first[1], graph);
-        const second_measurement = await benchmark_implementation(second[0], second[1], graph);
+        let first_name;
+        let first_runner;
+        let second_name;
+        let second_runner;
 
-        if (first[0] === "JS") {
+        if (run_index % 2 === 0) {
+          first_name = "JS";
+          first_runner = js_runner;
+
+          second_name = "WASM";
+          second_runner = wasm_runner;
+        } else {
+          first_name = "WASM";
+          first_runner = wasm_runner;
+
+          second_name = "JS";
+          second_runner = js_runner;
+        }
+
+        const first_measurement = await benchmark_implementation(
+          first_name,
+          first_runner,
+          graph
+        );
+
+        const second_measurement = await benchmark_implementation(
+          second_name,
+          second_runner,
+          graph
+        );
+
+        if (first_name === "JS") {
           js_runs.push(first_measurement.elapsed);
           js_result = first_measurement.result;
           js_timing_runs.push(first_measurement.result.timings);

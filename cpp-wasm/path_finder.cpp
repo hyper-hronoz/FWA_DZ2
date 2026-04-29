@@ -19,9 +19,7 @@ int run_shortest_path(
     std::uint32_t target,
     std::uint32_t *found,
     double *distance,
-    std::uint32_t *visited_count,
-    std::uint32_t *path_length,
-    std::uint32_t *path_buffer) {
+    std::uint32_t *visited_count) {
   if (node_count == 0 || node_count > max_node_count) {
     return 1;
   }
@@ -43,11 +41,6 @@ int run_shortest_path(
   *found = result.found ? 1U : 0U;
   *distance = result.found ? result.distance : 0.0;
   *visited_count = result.visited_count;
-  *path_length = static_cast<std::uint32_t>(result.path.size());
-
-  for (std::uint32_t index = 0; index < *path_length; index += 1) {
-    path_buffer[index] = result.path[index];
-  }
 
   return 0;
 }

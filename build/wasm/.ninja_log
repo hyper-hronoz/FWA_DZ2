@@ -1,11 +1,11 @@
 # ninja log v7
-7	1720	1777476162053244277	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
-2277	2358	1777476164321957314	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	56b6dd8dcb6d0bfb
-6	1760	1777476162050938527	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
-7	2277	1777476162051938535	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
-7	1722	1777476162053026647	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
-5	1852	1777485013570029128	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
-5	1874	1777485013570247831	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
-4	1903	1777485013567773288	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
-5	2401	1777485013568773301	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
-2401	2494	1777485015964804469	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	56b6dd8dcb6d0bfb
+11	1779	1777485300355203235	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
+2210	2285	1777485302553389946	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	56b6dd8dcb6d0bfb
+10	1863	1777485300353363315	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
+10	2210	1777485300354385812	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
+11	1742	1777485300354866369	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
+11	1744	1777485306609576737	CMakeFiles/path_finder_wasm.dir/cpp-wasm/path_finder.cpp.obj	3ab7c040f5b1e260
+11	1803	1777485306609225224	CMakeFiles/path_finder_wasm.dir/cpp-wasm/wasm_runtime.cpp.obj	f443ea330b3d097a
+10	1839	1777485306607438992	CMakeFiles/path_finder_wasm.dir/cpp-wasm/graph.cpp.obj	1a90f5570b0612bb
+11	2219	1777485306608439004	CMakeFiles/path_finder_wasm.dir/cpp-wasm/shortest_path_finder.cpp.obj	23364cf0d8bd5415
+2219	2301	1777485308816465700	/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/src/wasm/path_finder_wasm.wasm	56b6dd8dcb6d0bfb

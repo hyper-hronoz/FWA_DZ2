@@ -84,8 +84,6 @@ function map_error_code(error_code) {
       return "Некорректные вершины старта или финиша.";
     case 4:
       return "В массивах рёбер есть вершина вне диапазона.";
-    case 5:
-      return "Не удалось восстановить путь.";
     default:
       return `WASM вернул неизвестный код ошибки: ${error_code}.`;
   }
@@ -117,16 +115,15 @@ export function shortest_path_wasm(node_count, from, to, weights, start, target)
   }
 
   const transfer_started = performance.now();
-  wasm_exports.reset_allocator();
 
+  wasm_exports.reset_allocator();
   const from_pointer = copy_uint32_array(from);
   const to_pointer = copy_uint32_array(to);
   const weights_pointer = copy_float64_array(weights);
   const found_pointer = alloc_uint32();
   const distance_pointer = alloc_float64();
   const visited_count_pointer = alloc_uint32();
-  const path_length_pointer = alloc_uint32();
-  const path_pointer = alloc_uint32(node_count);
+
   const transfer_in_time = performance.now() - transfer_started;
 
   const compute_started = performance.now();
@@ -140,9 +137,7 @@ export function shortest_path_wasm(node_count, from, to, weights, start, target)
     target,
     found_pointer,
     distance_pointer,
-    visited_count_pointer,
-    path_length_pointer,
-    path_pointer
+    visited_count_pointer
   );
   const compute_time = performance.now() - compute_started;
 
@@ -154,15 +149,11 @@ export function shortest_path_wasm(node_count, from, to, weights, start, target)
   const found = Boolean(new Uint32Array(get_memory().buffer, found_pointer, 1)[0]);
   const distance = new Float64Array(get_memory().buffer, distance_pointer, 1)[0];
   const visited_count = new Uint32Array(get_memory().buffer, visited_count_pointer, 1)[0];
-  const path_length = new Uint32Array(get_memory().buffer, path_length_pointer, 1)[0];
-  const path_nodes = Array.from(new Uint32Array(get_memory().buffer, path_pointer, path_length));
   const read_out_time = performance.now() - read_started;
 
   return {
     found,
     distance: found ? distance : null,
-    path_length,
-    path_nodes,
     visited_count,
     timings: {
       transfer: transfer_in_time + read_out_time,

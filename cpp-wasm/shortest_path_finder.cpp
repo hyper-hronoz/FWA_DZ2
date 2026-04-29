@@ -1,6 +1,5 @@
 #include "shortest_path_finder.h"
 
-#include <algorithm>
 #include <limits>
 #include <queue>
 #include <utility>
@@ -18,7 +17,6 @@ int shortest_path_finder::run(const graph &graph, std::uint32_t start, std::uint
   using queue_entry = std::pair<double, std::uint32_t>;
 
   std::vector<double> distances(graph.node_count(), inf);
-  std::vector<std::int32_t> previous_nodes(graph.node_count(), -1);
   std::vector<bool> visited(graph.node_count(), false);
   std::priority_queue<queue_entry, std::vector<queue_entry>, std::greater<>> queue;
 
@@ -52,7 +50,6 @@ int shortest_path_finder::run(const graph &graph, std::uint32_t start, std::uint
       }
 
       distances[next_node] = next_cost;
-      previous_nodes[next_node] = static_cast<std::int32_t>(node);
       queue.push({next_cost, next_node});
     }
   }
@@ -63,23 +60,5 @@ int shortest_path_finder::run(const graph &graph, std::uint32_t start, std::uint
 
   result.found = true;
   result.distance = distances[target];
-
-  for (std::int32_t cursor = static_cast<std::int32_t>(target);; cursor = previous_nodes[cursor]) {
-    if (result.path.size() >= graph.node_count()) {
-      return 5;
-    }
-
-    result.path.push_back(static_cast<std::uint32_t>(cursor));
-    if (cursor == static_cast<std::int32_t>(start)) {
-      break;
-    }
-
-    if (previous_nodes[cursor] < 0) {
-      result = {};
-      return 0;
-    }
-  }
-
-  std::reverse(result.path.begin(), result.path.end());
   return 0;
 }
