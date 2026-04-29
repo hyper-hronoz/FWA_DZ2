@@ -1,21 +1,19 @@
-#pragma once
+#ifndef __GRAPH_H__
+#define __GRAPH_H__
 
 #include <cstdint>
 #include <vector>
 
-class graph {
+class Graph {
 public:
   struct edge {
     std::uint32_t to;
     double weight;
   };
 
-  graph(
-      std::uint32_t node_count,
-      std::uint32_t edge_count,
-      const std::uint32_t *from,
-      const std::uint32_t *to,
-      const double *weights);
+  Graph(std::uint32_t node_count, std::uint32_t edge_count,
+        const std::uint32_t *from, const std::uint32_t *to,
+        const double *weights);
 
   std::uint32_t node_count() const;
   bool is_valid() const;
@@ -26,3 +24,5 @@ private:
   bool is_valid_ = true;
   std::vector<std::vector<edge>> adjacency_;
 };
+
+#endif

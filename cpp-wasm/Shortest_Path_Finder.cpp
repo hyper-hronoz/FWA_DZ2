@@ -1,15 +1,16 @@
-#include "shortest_path_finder.h"
-
 #include <limits>
 #include <queue>
 #include <utility>
 #include <vector>
 
+#include "Shortest_Path_Finder.h"
+
 namespace {
 constexpr double inf = std::numeric_limits<double>::infinity();
 }
 
-int shortest_path_finder::run(const graph &graph, std::uint32_t start, std::uint32_t target, result &result) const {
+int Shortest_Path_Finder::run(const Graph &graph, std::uint32_t start,
+                              std::uint32_t target, result &result) const {
   if (!graph.is_valid()) {
     return 4;
   }
@@ -18,7 +19,8 @@ int shortest_path_finder::run(const graph &graph, std::uint32_t start, std::uint
 
   std::vector<double> distances(graph.node_count(), inf);
   std::vector<bool> visited(graph.node_count(), false);
-  std::priority_queue<queue_entry, std::vector<queue_entry>, std::greater<>> queue;
+  std::priority_queue<queue_entry, std::vector<queue_entry>, std::greater<>>
+      queue;
 
   result = {};
   distances[start] = 0.0;
