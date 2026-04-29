@@ -1,6 +1,6 @@
 import { build_compressed_sparse_row } from "./Graph.js";
 
-class min_heap {
+class Min_Heap {
   constructor() {
     this.items = [];
   }
@@ -77,6 +77,7 @@ class min_heap {
   }
 }
 
+/* PATH_RECONSTRUCTION_DISABLED
 function reconstruct_path_length(previous, start, target) {
   if (target !== start && previous[target] === -1) {
     return 0;
@@ -120,6 +121,7 @@ function reconstruct_path_nodes(previous, start, target) {
   reversed_path.reverse();
   return reversed_path;
 }
+PATH_RECONSTRUCTION_DISABLED */
 
 export class shortest_path_finder_js {
   find_shortest_path(graph, start, target, prebuilt_csr) {
@@ -128,18 +130,20 @@ export class shortest_path_finder_js {
     }
 
     const build_started = performance.now();
-    const { offsets, neighbors, costs } =
+    const { offsets: row_ptrs, neighbors, costs } =
       prebuilt_csr ?? build_compressed_sparse_row(graph.node_count, graph.from, graph.to, graph.weights);
     const build_time = performance.now() - build_started;
 
     const distances = new Float64Array(graph.node_count);
     distances.fill(Number.POSITIVE_INFINITY);
 
+    /* PATH_RECONSTRUCTION_DISABLED
     const previous = new Int32Array(graph.node_count);
     previous.fill(-1);
+    PATH_RECONSTRUCTION_DISABLED */
 
     const visited = new Uint8Array(graph.node_count);
-    const heap = new min_heap();
+    const heap = new Min_Heap();
     let visited_count = 0;
 
     const compute_started = performance.now();
@@ -168,13 +172,15 @@ export class shortest_path_finder_js {
         continue;
       }
 
-      for (let edge_index = offsets[node]; edge_index < offsets[node + 1]; edge_index += 1) {
+      for (let edge_index = row_ptrs[node]; edge_index < row_ptrs[node + 1]; edge_index += 1) {
         const next_node = neighbors[edge_index];
         const next_cost = cost + costs[edge_index];
 
         if (next_cost < distances[next_node]) {
           distances[next_node] = next_cost;
+          /* PATH_RECONSTRUCTION_DISABLED
           previous[next_node] = node;
+          PATH_RECONSTRUCTION_DISABLED */
           heap.push(next_node, next_cost);
         }
       }
@@ -185,8 +191,10 @@ export class shortest_path_finder_js {
     return {
       found,
       distance: found ? distances[target] : null,
+      /* PATH_RECONSTRUCTION_DISABLED
       path_length: found ? reconstruct_path_length(previous, start, target) : 0,
       path_nodes: found ? reconstruct_path_nodes(previous, start, target) : [],
+      PATH_RECONSTRUCTION_DISABLED */
       visited_count,
       timings: {
         build: build_time,

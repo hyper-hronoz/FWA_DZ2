@@ -4,7 +4,7 @@ export class Graph {
     this.from = [];
     this.to = [];
     this.weights = [];
-    this.seen = new Set();
+    this.edge_ids = new Set();
   }
 
   add_edge(a, b, weight) {
@@ -14,13 +14,13 @@ export class Graph {
 
     const min_node = Math.min(a, b);
     const max_node = Math.max(a, b);
-    const key = min_node * this.node_count + max_node;
+    const id = min_node * this.node_count + max_node;
 
-    if (this.seen.has(key)) {
+    if (this.edge_ids.has(id)) {
       return false;
     }
 
-    this.seen.add(key);
+    this.edge_ids.add(id);
     this.from.push(a, b);
     this.to.push(b, a);
     this.weights.push(weight, weight);
@@ -32,16 +32,16 @@ export class Graph {
       throw new Error("Массивы рёбер должны иметь одинаковую длину.");
     }
 
-    const offsets = new Uint32Array(this.node_count + 1);
+    const row_ptr = new Uint32Array(this.node_count + 1);
     for (let index = 0; index < this.from.length; index += 1) {
-      offsets[this.from[index] + 1] += 1;
+      row_ptr[this.from[index] + 1] += 1;
     }
 
-    for (let index = 1; index < offsets.length; index += 1) {
-      offsets[index] += offsets[index - 1];
+    for (let index = 1; index < row_ptr.length; index += 1) {
+      row_ptr[index] += row_ptr[index - 1];
     }
 
-    const cursor = offsets.slice(0, this.node_count);
+    const cursor = row_ptr.slice(0, this.node_count);
     const neighbors = new Uint32Array(this.to.length);
     const costs = new Float64Array(this.weights.length);
 
@@ -53,7 +53,7 @@ export class Graph {
       cursor[source] += 1;
     }
 
-    return { offsets, neighbors, costs };
+    return { offsets: row_ptr, neighbors, costs };
   }
 
   to_dataset({ seed, start, target }) {
@@ -66,7 +66,7 @@ export class Graph {
       seed,
       start,
       target,
-      undirected_edge_count: this.seen.size,
+      undirected_edge_count: this.edge_ids.size,
       directed_edge_count: this.from.length,
       from,
       to,

@@ -126,12 +126,13 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
       throw new Error("JS и WASM вычислили разные расстояния.");
     }
 
-    if (js_result.path_length !== wasm_result.path_length) {
-      throw new Error("JS и WASM вычислили разные длины маршрута.");
-    }
-
     if (js_result.visited_count !== wasm_result.visited_count) {
       throw new Error("JS и WASM посетили разное количество вершин.");
+    }
+
+    /* PATH_RECONSTRUCTION_DISABLED
+    if (js_result.path_length !== wasm_result.path_length) {
+      throw new Error("JS и WASM вычислили разные длины маршрута.");
     }
 
     if (js_result.path_nodes.length !== wasm_result.path_nodes.length) {
@@ -143,6 +144,7 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
         throw new Error("JS и WASM построили разные кратчайшие пути.");
       }
     }
+    PATH_RECONSTRUCTION_DISABLED */
   }
 
   function render_results(js_runs, wasm_runs, js_result, wasm_result) {
@@ -152,6 +154,17 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
 
     ui_context.result_fields.js_average.textContent = format_milliseconds(js_average);
     ui_context.result_fields.wasm_average.textContent = format_milliseconds(wasm_average);
+    render_detail_items(ui_context.result_fields.js_details, [
+      `Расстояние: ${format_distance(js_result.distance)}`,
+      `Посещено вершин: ${format_integer(js_result.visited_count)}`
+    ]);
+    render_detail_items(ui_context.result_fields.wasm_details, [
+      `Передача: ${format_milliseconds(wasm_result.timings.transfer)}`,
+      `Расчёт: ${format_milliseconds(wasm_result.timings.compute)}`,
+      `Расстояние: ${format_distance(wasm_result.distance)}`,
+      `Посещено вершин: ${format_integer(wasm_result.visited_count)}`
+    ]);
+    /* PATH_RECONSTRUCTION_DISABLED
     render_detail_items(ui_context.result_fields.js_details, [
       `Расстояние: ${format_distance(js_result.distance)}`,
       `Длина пути: ${format_integer(js_result.path_length)}`,
@@ -164,6 +177,7 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
       `Длина пути: ${format_integer(wasm_result.path_length)}`,
       `Посещено вершин: ${format_integer(wasm_result.visited_count)}`
     ]);
+    PATH_RECONSTRUCTION_DISABLED */
     ui_context.result_fields.js_bar.style.width = `${(js_average / max_value) * 100}%`;
     ui_context.result_fields.wasm_bar.style.width = `${(wasm_average / max_value) * 100}%`;
   }
@@ -192,6 +206,8 @@ import init_wasm, { shortest_path_wasm } from "./wasm/path_finder_wasm.js";
       const generation_started = performance.now();
       const graph = generate_road_graph(config);
       const generation_time = performance.now() - generation_started;
+
+      console.info("GENERATION TIME: ", generation_time)
 
       ui_context.render_dataset(graph, generation_time);
 

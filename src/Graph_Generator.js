@@ -32,11 +32,11 @@ export class Graph_Generator {
     const graph = new Graph(node_count);
 
     // гарантируем что граф будет связным
-    for (let node = 1; node < node_count; node += 1) {
+    for (let node = 1; node < node_count; node++) {
       graph.add_edge(node - 1, node, this.random_weight());
     }
 
-    while (graph.seen.size < target_undirected_edges) {
+    while (graph.edge_ids.size < target_undirected_edges) {
       const a = this.random_int(node_count);
       let b = this.random_int(node_count - 1);
       if (b >= a) {

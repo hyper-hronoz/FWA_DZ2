@@ -28,7 +28,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -49,7 +48,6 @@ events:
       - "/home/node_modules/.bin/uname"
       - "/node_modules/.bin/uname"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/uname"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/uname"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/uname"
       - "/home/hronoz/.local/bin/uname"
       - "/home/hronoz/.cargo/bin/uname"
@@ -74,7 +72,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -122,7 +119,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -141,7 +137,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -177,9 +172,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/ninja-build"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/ninja"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/samu"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/ninja-build"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/ninja"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/samu"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/ninja-build"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/ninja"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/samu"
@@ -234,9 +226,6 @@ events:
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/ninja-build"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/ninja"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/samu"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/ninja-build"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/ninja"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/samu"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/ninja-build"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/ninja"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/samu"
@@ -272,7 +261,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -327,7 +315,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -391,7 +378,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -411,7 +397,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -432,7 +417,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-strip"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-strip"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-strip"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-strip"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-strip"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-strip"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-strip"
@@ -462,7 +446,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -504,7 +487,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -524,7 +506,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -545,7 +526,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/ld.lld"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/ld.lld"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/ld.lld"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/ld.lld"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/ld.lld"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/ld.lld"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/ld.lld"
@@ -575,7 +555,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -617,7 +596,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -637,7 +615,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -658,7 +635,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-nm"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-nm"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-nm"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-nm"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-nm"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-nm"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-nm"
@@ -688,7 +664,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -730,7 +705,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -750,7 +724,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -771,7 +744,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-objdump"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-objdump"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-objdump"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-objdump"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-objdump"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-objdump"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-objdump"
@@ -801,7 +773,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -843,7 +814,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -863,7 +833,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -884,7 +853,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-objcopy"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-objcopy"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-objcopy"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-objcopy"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-objcopy"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-objcopy"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-objcopy"
@@ -914,7 +882,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -956,7 +923,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -976,7 +942,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -997,7 +962,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-readelf"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-readelf"
@@ -1017,7 +981,6 @@ events:
       - "/home/node_modules/.bin/llvm-readelf"
       - "/node_modules/.bin/llvm-readelf"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-readelf"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-readelf"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-readelf"
       - "/home/hronoz/.local/bin/llvm-readelf"
       - "/home/hronoz/.cargo/bin/llvm-readelf"
@@ -1037,7 +1000,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/readelf"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/readelf"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/readelf"
@@ -1057,7 +1019,6 @@ events:
       - "/home/node_modules/.bin/readelf"
       - "/node_modules/.bin/readelf"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/readelf"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/readelf"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/readelf"
       - "/home/hronoz/.local/bin/readelf"
       - "/home/hronoz/.cargo/bin/readelf"
@@ -1082,7 +1043,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -1124,7 +1084,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -1144,7 +1103,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -1165,7 +1123,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-dlltool"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-dlltool"
@@ -1185,7 +1142,6 @@ events:
       - "/home/node_modules/.bin/llvm-dlltool"
       - "/node_modules/.bin/llvm-dlltool"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-dlltool"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-dlltool"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-dlltool"
       - "/home/hronoz/.local/bin/llvm-dlltool"
       - "/home/hronoz/.cargo/bin/llvm-dlltool"
@@ -1205,7 +1161,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/dlltool"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/dlltool"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/dlltool"
@@ -1225,7 +1180,6 @@ events:
       - "/home/node_modules/.bin/dlltool"
       - "/node_modules/.bin/dlltool"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/dlltool"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/dlltool"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/dlltool"
       - "/home/hronoz/.local/bin/dlltool"
       - "/home/hronoz/.cargo/bin/dlltool"
@@ -1255,7 +1209,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -1297,7 +1250,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -1317,7 +1269,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -1338,7 +1289,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-addr2line"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-addr2line"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-addr2line"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-addr2line"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-addr2line"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-addr2line"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-addr2line"
@@ -1368,7 +1318,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -1409,7 +1358,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -1429,7 +1377,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -1450,7 +1397,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/tapi"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/tapi"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/tapi"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/tapi"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/tapi"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/tapi"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/tapi"
@@ -1470,7 +1416,6 @@ events:
       - "/home/node_modules/.bin/tapi"
       - "/node_modules/.bin/tapi"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/tapi"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/tapi"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/tapi"
       - "/home/hronoz/.local/bin/tapi"
       - "/home/hronoz/.cargo/bin/tapi"
@@ -1500,7 +1445,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -1544,7 +1488,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -1564,7 +1507,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -1585,7 +1527,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ar-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ar-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar-21.1"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ar-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ar-21.1"
@@ -1605,7 +1546,6 @@ events:
       - "/home/node_modules/.bin/llvm-ar-21.1"
       - "/node_modules/.bin/llvm-ar-21.1"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar-21.1"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar-21.1"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar-21.1"
       - "/home/hronoz/.local/bin/llvm-ar-21.1"
       - "/home/hronoz/.cargo/bin/llvm-ar-21.1"
@@ -1625,7 +1565,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ar-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ar-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar-21"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ar-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ar-21"
@@ -1645,7 +1584,6 @@ events:
       - "/home/node_modules/.bin/llvm-ar-21"
       - "/node_modules/.bin/llvm-ar-21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar-21"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar-21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar-21"
       - "/home/hronoz/.local/bin/llvm-ar-21"
       - "/home/hronoz/.cargo/bin/llvm-ar-21"
@@ -1665,7 +1603,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ar21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ar21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar21"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ar21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ar21"
@@ -1685,7 +1622,6 @@ events:
       - "/home/node_modules/.bin/llvm-ar21"
       - "/node_modules/.bin/llvm-ar21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar21"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar21"
       - "/home/hronoz/.local/bin/llvm-ar21"
       - "/home/hronoz/.cargo/bin/llvm-ar21"
@@ -1705,7 +1641,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ar"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ar"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ar"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ar"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ar"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ar"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ar"
@@ -1735,7 +1670,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -1779,7 +1713,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -1799,7 +1732,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -1820,7 +1752,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ranlib-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ranlib-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib-21.1"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ranlib-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ranlib-21.1"
@@ -1840,7 +1771,6 @@ events:
       - "/home/node_modules/.bin/llvm-ranlib-21.1"
       - "/node_modules/.bin/llvm-ranlib-21.1"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib-21.1"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib-21.1"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib-21.1"
       - "/home/hronoz/.local/bin/llvm-ranlib-21.1"
       - "/home/hronoz/.cargo/bin/llvm-ranlib-21.1"
@@ -1860,7 +1790,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ranlib-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ranlib-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib-21"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ranlib-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ranlib-21"
@@ -1880,7 +1809,6 @@ events:
       - "/home/node_modules/.bin/llvm-ranlib-21"
       - "/node_modules/.bin/llvm-ranlib-21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib-21"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib-21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib-21"
       - "/home/hronoz/.local/bin/llvm-ranlib-21"
       - "/home/hronoz/.cargo/bin/llvm-ranlib-21"
@@ -1900,7 +1828,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ranlib21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ranlib21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib21"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ranlib21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ranlib21"
@@ -1920,7 +1847,6 @@ events:
       - "/home/node_modules/.bin/llvm-ranlib21"
       - "/node_modules/.bin/llvm-ranlib21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib21"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib21"
       - "/home/hronoz/.local/bin/llvm-ranlib21"
       - "/home/hronoz/.cargo/bin/llvm-ranlib21"
@@ -1940,7 +1866,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/llvm-ranlib"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/llvm-ranlib"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/llvm-ranlib"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/llvm-ranlib"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/llvm-ranlib"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/llvm-ranlib"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/llvm-ranlib"
@@ -1970,7 +1895,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -2014,7 +1938,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/"
@@ -2034,7 +1957,6 @@ events:
       - "/home/node_modules/.bin/"
       - "/node_modules/.bin/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/"
       - "/home/hronoz/.local/bin/"
       - "/home/hronoz/.cargo/bin/"
@@ -2055,7 +1977,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/clang-scan-deps-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/clang-scan-deps-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps-21.1"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/clang-scan-deps-21.1"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/clang-scan-deps-21.1"
@@ -2075,7 +1996,6 @@ events:
       - "/home/node_modules/.bin/clang-scan-deps-21.1"
       - "/node_modules/.bin/clang-scan-deps-21.1"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps-21.1"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps-21.1"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps-21.1"
       - "/home/hronoz/.local/bin/clang-scan-deps-21.1"
       - "/home/hronoz/.cargo/bin/clang-scan-deps-21.1"
@@ -2095,7 +2015,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/clang-scan-deps-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/clang-scan-deps-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps-21"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/clang-scan-deps-21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/clang-scan-deps-21"
@@ -2115,7 +2034,6 @@ events:
       - "/home/node_modules/.bin/clang-scan-deps-21"
       - "/node_modules/.bin/clang-scan-deps-21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps-21"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps-21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps-21"
       - "/home/hronoz/.local/bin/clang-scan-deps-21"
       - "/home/hronoz/.cargo/bin/clang-scan-deps-21"
@@ -2135,7 +2053,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/clang-scan-deps21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/clang-scan-deps21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps21"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/clang-scan-deps21"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/clang-scan-deps21"
@@ -2155,7 +2072,6 @@ events:
       - "/home/node_modules/.bin/clang-scan-deps21"
       - "/node_modules/.bin/clang-scan-deps21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps21"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps21"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps21"
       - "/home/hronoz/.local/bin/clang-scan-deps21"
       - "/home/hronoz/.cargo/bin/clang-scan-deps21"
@@ -2175,7 +2091,6 @@ events:
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/node_modules/.bin/clang-scan-deps"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/node_modules/.bin/clang-scan-deps"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps"
-      - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.local/bin/clang-scan-deps"
       - "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/home/hronoz/.cargo/bin/clang-scan-deps"
@@ -2195,7 +2110,6 @@ events:
       - "/home/node_modules/.bin/clang-scan-deps"
       - "/node_modules/.bin/clang-scan-deps"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/clang-scan-deps"
-      - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3/clang-scan-deps"
       - "/home/hronoz/.nvm/versions/node/v24.11.1/bin/clang-scan-deps"
       - "/home/hronoz/.local/bin/clang-scan-deps"
       - "/home/hronoz/.cargo/bin/clang-scan-deps"
@@ -2220,7 +2134,6 @@ events:
         - "/home/node_modules/.bin"
         - "/node_modules/.bin"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin"
-        - "/home/hronoz/.codex/tmp/arg0/codex-arg0K8ZJc3"
         - "/home/hronoz/.nvm/versions/node/v24.11.1/bin"
         - "/home/hronoz/.local/bin"
         - "/home/hronoz/.cargo/bin"
@@ -2241,8 +2154,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn"
-      binary: "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn"
+      source: "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ"
+      binary: "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps"
       CMAKE_CXX_COMPILER_TARGET: "wasm32-wasi"
@@ -2257,17 +2170,17 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn'
+        Change Dir: '/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_8956e
-        [1/2] /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang++ --target=wasm32-wasi --sysroot=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot   -v -MD -MT CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja -v cmTC_66b36
+        [1/2] /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang++ --target=wasm32-wasi --sysroot=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot   -v -MD -MT CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang version 21.1.4-wasi-sdk (https://github.com/llvm/llvm-project 222fc11f2b8f25f6a0f4976272ef1bb7bf49521d)
         Target: wasm32-unknown-wasi
         Thread model: posix
         InstalledDir: /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin
         Configuration file: /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang++.cfg
          (in-process)
-         "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang-21" -cc1 -triple wasm32-unknown-wasi -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb -fdebug-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn -v -fcoverage-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn -resource-dir /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21 -dependency-file CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj.d -MT CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -isysroot /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21/include -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -o CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang-21" -cc1 -triple wasm32-unknown-wasi -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb -fdebug-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ -v -fcoverage-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ -resource-dir /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21 -dependency-file CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj.d -MT CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -isysroot /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21/include -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -o CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 21.1.4-wasi-sdk based upon LLVM 21.1.4-wasi-sdk default target wasm32-wasi
         #include "..." search starts here:
         #include <...> search starts here:
@@ -2277,7 +2190,7 @@ events:
          /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi
          /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include
         End of search list.
-        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_8956e.a && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ar qc libcmTC_8956e.a  CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ranlib libcmTC_8956e.a && :
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_66b36.a && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ar qc libcmTC_66b36.a  CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ranlib libcmTC_66b36.a && :
         
       exitCode: 0
   -
@@ -2314,17 +2227,17 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn']
+        ignore line: [Change Dir: '/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_8956e]
-        ignore line: [[1/2] /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang++ --target=wasm32-wasi --sysroot=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot   -v -MD -MT CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_66b36]
+        ignore line: [[1/2] /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang++ --target=wasm32-wasi --sysroot=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot   -v -MD -MT CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 21.1.4-wasi-sdk (https://github.com/llvm/llvm-project 222fc11f2b8f25f6a0f4976272ef1bb7bf49521d)]
         ignore line: [Target: wasm32-unknown-wasi]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin]
         ignore line: [Configuration file: /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang++.cfg]
         ignore line: [ (in-process)]
-        ignore line: [ "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang-21" -cc1 -triple wasm32-unknown-wasi -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb -fdebug-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn -v -fcoverage-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-HFmHrn -resource-dir /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21 -dependency-file CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj.d -MT CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -isysroot /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21/include -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -o CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/clang-21" -cc1 -triple wasm32-unknown-wasi -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb -fdebug-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ -v -fcoverage-compilation-dir=/home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/build/wasm/CMakeFiles/CMakeScratch/TryCompile-A25QbQ -resource-dir /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21 -dependency-file CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj.d -MT CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -isysroot /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/c++/v1 -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/lib/clang/21/include -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi -internal-isystem /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -o CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 21.1.4-wasi-sdk based upon LLVM 21.1.4-wasi-sdk default target wasm32-wasi]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
@@ -2334,7 +2247,7 @@ events:
         ignore line: [ /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasi]
         ignore line: [ /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/share/wasi-sysroot/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/cmake -E rm -f libcmTC_8956e.a && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ar qc libcmTC_8956e.a  CMakeFiles/cmTC_8956e.dir/CMakeCXXCompilerABI.cpp.obj && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ranlib libcmTC_8956e.a && :]
+        ignore line: [[2/2] : && /usr/bin/cmake -E rm -f libcmTC_66b36.a && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ar qc libcmTC_66b36.a  CMakeFiles/cmTC_66b36.dir/CMakeCXXCompilerABI.cpp.obj && /home/hronoz/Desktop/temp/BMSTU_FWA/FWA_DZ_2/.tools/wasi-sdk-29.0-x86_64-linux/bin/llvm-ranlib libcmTC_66b36.a && :]
         ignore line: []
         ignore line: []
         implicit libs: []
